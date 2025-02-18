@@ -1,3 +1,116 @@
 .container {
   height: 95vh;
 }
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif; /* Use a clean font */
+  background-color: #f8f9fa; /* Light background for the entire page */
+}
+
+#left-panel {
+  width: 250px; /* Fixed width for the left panel */
+  height: 100vh; /* Full height of the viewport */
+  overflow-y: auto; /* Allow scrolling if content exceeds height */
+  padding: 10px;
+  background-color: #f4f4f4; /* Light gray background */
+  border-right: 1px solid #ccc; /* Light border for separation */
+}
+#left-panel h3 {
+  margin-top: 0; /* Remove default margin for the heading */
+}
+
+.chooseFile {
+  margin-bottom: 10px; /* Space below the input */
+  margin-right: 10px;
+  padding: 8px; /* Padding for better appearance */
+  border: 1px solid #ccc; /* Light border */
+  border-radius: 4px; /* Rounded corners */
+  width: 90%; /* Full width */
+}
+
+#text-container {
+  margin-top: 10px; /* Space above the text container */
+}
+
+#text-container div {
+  display: flex; /* Use flexbox for alignment */
+  justify-content: space-between; /* Space between text and button */
+  align-items: center; /* Center align items vertically */
+  padding: 5px; /* Add some padding */
+  margin-bottom: 10px; /* Space between each text element */
+  background-color: #e0f7fa; /* Light background color */
+  border-radius: 5px; /* Rounded corners */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.trash-button {
+  background: none; /* No background */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor for better UX */
+  color: #3409a1; /* Red color for the trash icon */
+  font-size: 16px; /* Font size for the icon */
+}
+
+
+.trash-button:hover {
+  color: #0d7f94; /* Darker red on hover */
+}
+
+.highlight {
+  background-color: rgb(17, 162, 207); /* Change this to your desired highlight color */
+  border: 1px solid rgb(41, 11, 177); /* Optional border */
+  padding: 2px;
+}
+
+/* Toolbar container */
+.PSPDFKit-Toolbar {
+  display: flex;
+  gap: 5px; /* Consistent spacing between items */
+  padding: 8px 16px;
+  background: #ffffff;
+  border-bottom: 1px solid #e0e0e0; /* Subtle divider */
+  align-items: center;
+}
+
+/* Group for left-aligned redaction tools */
+.PSPDFKit-Toolbar .redaction-group {
+  display: flex;
+  gap: 3px; /* Tight spacing between Random and Rectangle */
+  align-items: center;
+  flex-grow: 1; /* Allow Apply button to stay right */
+}
+
+/* Base button styling */
+.PSPDFKit-Toolbar .toolbar-item {
+  padding: 6px 12px;
+  border: 1px solid #e0e0e0; /* Unified border */
+  border-radius: 4px;
+  background: #ffffff;
+  color: #333333;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+/* Hover state */
+.PSPDFKit-Toolbar .toolbar-item:hover {
+  background: #f8f8f8;
+  border-color: #d0d0d0;
+}
+
+/* Push "Apply Redactions" to far right */
+.PSPDFKit-Toolbar .applyRedactions {
+  margin-left: auto; /* Forces to right edge */
+  order: 2; /* Explicit right placement */
+}
+
+/* Specific spacing adjustments */
+.PSPDFKit-Toolbar .randomRedaction {
+  margin-right: 3px; /* Small gap to Rectangle */
+}
+
+.PSPDFKit-Toolbar .redactRectangle {
+  margin-left: 0; /* Directly adjacent to Random */
+}
